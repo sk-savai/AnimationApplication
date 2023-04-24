@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragment.animation.AnimationFragment">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivFireBaseImage"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_firebase_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRotateAfter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/rotation_after"
+                app:layout_constraintEnd_toStartOf="@id/btnRotateBefore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivFireBaseImage" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRotateBefore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/rotation_before"
+                app:layout_constraintBottom_toBottomOf="@id/btnRotateAfter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnRotateAfter"
+                app:layout_constraintTop_toTopOf="@id/btnRotateAfter" />
+
+            <View
+                android:id="@+id/viewRotate"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/purple_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnRotateAfter" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivFireBaseFadeInOut"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_firebase_image"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewRotate" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFadeInAfter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/fade_in_after"
+                app:layout_constraintEnd_toStartOf="@id/btnFadeOutBefore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivFireBaseFadeInOut" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFadeOutBefore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/fade_out_before"
+                app:layout_constraintBottom_toBottomOf="@id/btnFadeInAfter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnFadeInAfter"
+                app:layout_constraintTop_toTopOf="@id/btnFadeInAfter" />
+
+            <View
+                android:id="@+id/viewFadeInOut"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/purple_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnFadeInAfter" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivFireBaseZoomInOut"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_firebase_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewFadeInOut" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnZoomInAfter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/zoom_in_after"
+                app:layout_constraintEnd_toStartOf="@id/btnZoomOutBefore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivFireBaseZoomInOut" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnZoomOutBefore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/zoom_out_before"
+                app:layout_constraintBottom_toBottomOf="@id/btnZoomInAfter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnZoomInAfter"
+                app:layout_constraintTop_toTopOf="@id/btnZoomInAfter" />
+
+            <View
+                android:id="@+id/viewBtnZoomInAfter"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/purple_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnZoomInAfter" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivFireBaseSlide"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_firebase_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewBtnZoomInAfter" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSlideAfter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/sliding_image"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@id/ivFireBaseSlide"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivFireBaseSlide" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSlideAfter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/slide_in_after"
+                app:layout_constraintEnd_toStartOf="@id/btnSlideBefore"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivFireBaseSlide" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSlideBefore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/slide_out_before"
+                app:layout_constraintBottom_toBottomOf="@id/btnSlideAfter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnSlideAfter"
+                app:layout_constraintTop_toTopOf="@id/btnSlideAfter" />
+
+            <View
+                android:id="@+id/viewBtnSlide"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/purple_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnSlideAfter" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvBounce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_90sdp"
+                android:text="@string/sliding_image"
+                android:textColor="@color/teal_700"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewBtnSlide" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBounce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:backgroundTint="@color/teal_700"
+                android:text="@string/bounce"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBounce" />
+
+
+            <View
+                android:id="@+id/viewSharedOption"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/purple_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnBounce" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cvSharedImage"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:backgroundTint="@color/teal_700"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewSharedOption">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="@dimen/_50sdp"
+                        android:transitionName="user_image"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/ivFirebaseDetails"
+                        android:src="@drawable/ic_firebase_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvName"
+                        android:transitionName="user_name"
+                        android:text="@string/savai_solanki"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:layout_constraintStart_toEndOf="@id/ivFirebaseDetails"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:id="@+id/tvDescription"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:transitionName="user_description"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/tvName"
+                        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

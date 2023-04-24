@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DataFilteringApplication</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="mnAnimation">Animation</string>
+    <string name="splash">Splash</string>
+    <string name="animation">Animation</string>
+    <string name="rotation">Rotation</string>
+    <string name="rotation_before">Rotate Anty Clock</string>
+    <string name="rotation_after">Rotate Clock</string>
+    <string name="fade_in_after">Fade In</string>
+    <string name="fade_out_before">Fade Out</string>
+    <string name="zoom_in_after">Zoom In</string>
+    <string name="zoom_out_before">Zoom Out</string>
+    <string name="slide_in_after">Slide after</string>
+    <string name="slide_out_before">Slide Before</string>
+    <string name="sliding_image">Sliding Image</string>
+    <string name="bounce">Bounce</string>
+    <string name="savai_solanki">Savai Solanki</string>
+    <string name="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+</resources>

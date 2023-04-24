@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.datafilteringapplication.fragment.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_animationFragment"
+            app:destination="@id/menuAnimationFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/splashFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/menuAnimationFragment"
+        android:name="com.example.datafilteringapplication.fragment.animation.AnimationFragment"
+        android:label="fragment_animation"
+        tools:layout="@layout/fragment_animation" >
+        <action
+            android:id="@+id/action_menuAnimationFragment_to_sharedFragment"
+            app:destination="@id/sharedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuHomeFragment"
+        android:name="com.example.datafilteringapplication.fragment.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/sharedFragment"
+        android:name="com.example.datafilteringapplication.fragment.sharerd.SharedFragment"
+        android:label="SharedFragment"
+        tools:layout="@layout/fragment_shared"/>
+</navigation>
