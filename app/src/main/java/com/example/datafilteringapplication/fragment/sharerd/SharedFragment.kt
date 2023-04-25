@@ -29,6 +29,10 @@ class SharedFragment : Fragment() {
         sharedElementEnterTransition=animation
 
 
+
+
+
+
         animation.duration=1000
         sharedElementReturnTransition=animation
         return binding.root
